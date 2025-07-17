@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MRates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2a5298, #3a7bd5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            margin: 30px 0;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #0f4c75, #3282b8);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            right: -60px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .intro {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .policy-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3282b8;
+        }
+        
+        .section-number {
+            background: #0f4c75;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        
+        .section-title {
+            color: #0f4c75;
+            font-size: 1.6rem;
+        }
+        
+        .section-content {
+            padding-left: 55px;
+        }
+        
+        .section-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background: #f0f8ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #3282b8;
+        }
+        
+        .policy-list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .policy-list li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .data-sources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .source-card {
+            background: #e6f7ff;
+            border-radius: 10px;
+            padding: 15px;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .source-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .source-card i {
+            font-size: 2rem;
+            color: #3282b8;
+            margin-bottom: 10px;
+        }
+        
+        .source-name {
+            font-weight: 600;
+            color: #0f4c75;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            background: #0f4c75;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #3282b8;
+            transform: translateY(-3px);
+        }
+        
+        .contact-link i {
+            margin-right: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f8ff;
+            color: #0f4c75;
+            font-weight: 500;
+            border-top: 1px solid #d1e8ff;
+        }
+        
+        .last-updated {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section-content {
+                padding-left: 0;
+            }
+            
+            .data-sources {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">MRates - Exchange Rates App</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <p>Your privacy is important to us. This Privacy Policy explains how the Exchange Rates app ("we", "our", or "us") handles your information. By using the app, you agree to the terms of this policy.</p>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <h2 class="section-title">Data Collection</h2>
+                </div>
+                <div class="section-content">
+                    <p>We do not collect, store, or share any personally identifiable information (PII) such as your name, email address, phone number, or location.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <h2 class="section-title">Third-Party Services</h2>
+                </div>
+                <div class="section-content">
+                    <p>While we do not collect personal data ourselves, our app integrates with third-party services that may collect non-personal, technical information such as device type, operating system, and general usage statistics for performance and security purposes.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>a. Supabase</strong></p>
+                        <p>We use Supabase to manage backend data (e.g., to retrieve and display exchange rates). Supabase may log anonymized or device-level data for monitoring and security. We do not store user accounts or personal data on Supabase.</p>
+                        <p><strong>Supabase Privacy Policy:</strong> <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
+                        <p><strong>b. Google AdMob</strong></p>
+                        <p>We use Google AdMob to display advertisements in the app. AdMob may collect and use certain data (such as your device information, usage data, and advertising identifiers) to serve personalized or non-personalized ads.</p>
+                        <p><strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <h2 class="section-title">Cookies and Tracking</h2>
+                </div>
+                <div class="section-content">
+                    <p>We do not use cookies or any form of tracking technologies for marketing or analytics within the app.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <h2 class="section-title">Children's Privacy</h2>
+                </div>
+                <div class="section-content">
+                    <p>This app is not intended for children under the age of 13. We do not knowingly collect any information from children.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">5</div>
+                    <h2 class="section-title">Your Choices</h2>
+                </div>
+                <div class="section-content">
+                    <p>You may choose to disable push notifications at any time through your device settings.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">6</div>
+                    <h2 class="section-title">External Data Sources</h2>
+                </div>
+                <div class="section-content">
+                    <p>The app displays data from publicly available external sources, including:</p>
+                    
+                    <div class="data-sources">
+                        <div class="source-card">
+                            <i class="fas fa-ticket-alt"></i>
+                            <div class="source-name">Thai Government Lottery Office</div>
+                        </div>
+                        <div class="source-card">
+                            <i class="fas fa-coins"></i>
+                            <div class="source-name">Gold API</div>
+                        </div>
+                        <div class="source-card">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="source-name">Exchange Rates API</div>
+                        </div>
+                        <div class="source-card">
+                            <i class="fas fa-search"></i>
+                            <div class="source-name">Sanook Lotto Checker</div>
+                        </div>
+                    </div>
+                    
+                    <p>We do not control or store data from these sources—our app simply fetches and displays publicly accessible information.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">7</div>
+                    <h2 class="section-title">Changes to This Policy</h2>
+                </div>
+                <div class="section-content">
+                    <p>We may update this Privacy Policy from time to time. Any changes will be posted within the app or on our website, along with the date of the update.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <div class="section-header">
+                    <div class="section-number">8</div>
+                    <h2 class="section-title">Contact Us</h2>
+                </div>
+                <div class="section-content">
+                    <p>If you have any questions, feedback, or concerns about this Privacy Policy, please contact us at:</p>
+                    <a href="mailto:lapsejhon@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> lapsejhon@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>MRates - Exchange Rates App</p>
+            <p class="last-updated">Last Updated: July 2025</p>
+        </div>
+    </div>
+</body>
+</html>
